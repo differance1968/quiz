@@ -15,6 +15,8 @@ class QuestionItemsController < ApplicationController
   # GET /question_items/new
   def new
     @question_item = QuestionItem.new
+    @question_item.question_id = params[:id]
+    @question = Question.find(params[:id])
   end
 
   # GET /question_items/1/edit
@@ -28,7 +30,7 @@ class QuestionItemsController < ApplicationController
 
     respond_to do |format|
       if @question_item.save
-        format.html { redirect_to @question_item, notice: 'Question item was successfully created.' }
+        format.html { redirect_to '/question_choices/new/' + @question_item.id.to_s,}
         format.json { render :show, status: :created, location: @question_item }
       else
         format.html { render :new }

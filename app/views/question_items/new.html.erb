@@ -1,5 +1,6 @@
-<h1>New Question Item</h1>
+<h1>問題の作成</h1>
+<p>「<%= @question.title %>」の問題</p>
 
 <%= render 'form', question_item: @question_item %>
 
-<%= link_to 'Back', question_items_path %>
+<%= link_to '問題グループ一覧に戻る', '/questions' %>

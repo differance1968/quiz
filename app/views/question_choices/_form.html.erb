@@ -11,24 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :question_item_id %>
-    <%= f.text_field :question_item_id %>
-  </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label :選択肢 %>
     <%= f.text_area :content %>
   </div>
 
   <div class="field">
-    <%= f.label :value %>
+    <%= f.label :選択肢の番号 %>
     <%= f.number_field :value %>
   </div>
 
   <div class="field">
-    <%= f.label :correct %>
-    <%= f.number_field :correct %>
+    <%= f.label :正解 %>
+    <%= f.check_box :correct %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :ここは変更しないで下さい %>
+    <%= f.text_field :question_item_id %>
   </div>
 
   <div class="actions">
